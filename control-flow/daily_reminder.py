@@ -14,9 +14,12 @@ match priority:
     case _:
         message = f"'{task}' has an unknown priority"
 
-if time_bound == "yes" and priority in ["high", "medium", "low"]:
-    message += " that requires immediate attention today!"
-elif time_bound == "no" and priority in ["high", "medium", "low"]:
-    message = f"Note: {message}. Consider completing it when you have free time."
+for _ in range(1):
+    if time_bound == "yes" and priority in ["high", "medium", "low"]:
+        print(f"Reminder: '{task}' is a {priority} priority task that requires immediate attention today!")
+    elif time_bound == "no" and priority in ["high", "medium", "low"]:
+        print(f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time.")
+    else:
+        print(f"Note: '{task}' has an unknown priority.")
 
 print("\nReminder:", message)
