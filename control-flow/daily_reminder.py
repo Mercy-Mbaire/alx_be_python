@@ -22,4 +22,3 @@ for _ in range(1):  # minimal loop just to satisfy "loops" requirement
         print(f"Note: '{task}'. Consider completing it when you have free time.")
     else:
         print(f"Note: '{task}'.")
-
