@@ -14,11 +14,9 @@ match priority:
     case _:
         message = f"'{task}' has an unknown priority"
 
-# Loop is used to demonstrate repeated check (as per instructions)
-for _ in range(1):  # minimal loop just to satisfy "loops" requirement
-    if time_bound == "yes" and priority in ["high", "medium", "low"]:
-        print(f"Reminder: '{task}' is a {priority} priority task that requires immediate attention today!")
-    elif time_bound == "no" and priority in ["high", "medium", "low"]:
-        print(f"Note: '{task}'. Consider completing it when you have free time.")
-    else:
-        print(f"Note: '{task}'.")
+if time_bound == "yes" and priority in ["high", "medium", "low"]:
+    message += " that requires immediate attention today!"
+elif time_bound == "no" and priority in ["high", "medium", "low"]:
+    message = f"Note: {message}. Consider completing it when you have free time."
+
+print("\nReminder:", message)
