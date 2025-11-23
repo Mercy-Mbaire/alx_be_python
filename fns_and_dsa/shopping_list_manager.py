@@ -1,13 +1,15 @@
+def display_menu():
+    print("Shopping List Manager")
+    print("1. Add item")
+    print("2. Remove item")
+    print("3. View list")
+    print("4. Exit")
+
 def main():
     shopping_list = []
 
     while True:
-        print("\nShopping List Manager")
-        print("1. Add item")
-        print("2. Remove item")
-        print("3. View list")
-        print("4. Exit")
-
+        display_menu()
         choice = input("Enter your choice (1-4): ").strip()
 
         if choice == "1":
@@ -25,7 +27,7 @@ def main():
 
         elif choice == "3":
             if shopping_list:
-                print("\nYour Shopping List:")
+                print("Your Shopping List:")
                 for item in shopping_list:
                     print(f"- {item}")
             else:
@@ -41,3 +43,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
