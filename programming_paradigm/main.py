@@ -1,4 +1,4 @@
-from library_management import Book, Library
+from programming_paradigm.library_management import Book, Library
 
 def main():
     # Setup a small library
